@@ -55,3 +55,17 @@ Resource blocks contain arguments which you use to configure the resource. Argum
 # More Information
 * Changes on the AMI requires Terraform to destroy and recreate the EC2 instance
 * Outputs will present useful information to the Terraform user
+
+# Saving the state file on the Terraform Cloud
+Steps to follow in order to store the configuration file on the Terraform Cloud platform:
+* Create an organization on the terraform cloud
+
+### Login to Terraform Cloud
+$ terraform login
+
+### Remove the Terraform state file from the local project
+$ rm terraform.tfstate
+
+### Configure the environment variables on the workspace/organization
+* AWS_SECRET_ACCESS_KEY 
+* AWS_ACCESS_KEY_ID

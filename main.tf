@@ -1,4 +1,10 @@
 terraform {
+  backend "remote" {
+    organization = "nickchecan"
+    workspaces {
+      name = "Terraform-AWS-Tutorial"
+    }
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
