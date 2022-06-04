@@ -27,6 +27,9 @@ $ terraform show
 ### Manually Manage State
 $ terraform state list
 
+### Display Output
+$ terraform output
+
 # State
 When you applied your configuration, Terraform wrote data into a file called terraform.tfstate. Terraform stores the IDs and properties of the resources it manages in this file, so that it can update or destroy those resources going forward.
 
@@ -50,4 +53,5 @@ Resource blocks have two strings before the block: the resource type and the res
 Resource blocks contain arguments which you use to configure the resource. Arguments can include things like machine sizes, disk image names, or VPC IDs. Our providers reference lists the required and optional arguments for each resource. For your EC2 instance, the example configuration sets the AMI ID to an Ubuntu image, and the instance type to t2.micro, which qualifies for AWS' free tier. It also sets a tag to give the instance a name.
 
 # More Information
-Changes on the AMI requires Terraform to destroy and recreate the EC2 instance
+* Changes on the AMI requires Terraform to destroy and recreate the EC2 instance
+* Outputs will present useful information to the Terraform user
